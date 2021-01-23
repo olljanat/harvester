@@ -13,7 +13,7 @@ RUN apt-get update -qq && apt-get install -y --no-install-recommends \
 # install yq
 RUN GO111MODULE=on go get github.com/mikefarah/yq/v3@3.4.1
 # set up helm
-ENV HELM_VERSION v3.4.1
+ENV HELM_VERSION v3.5.0
 ENV HELM_URL=https://get.helm.sh/helm-${HELM_VERSION}-linux-${ARCH}.tar.gz
 RUN mkdir /usr/tmp && \
     curl ${HELM_URL} | tar xvzf - --strip-components=1 -C /usr/tmp/ && \
